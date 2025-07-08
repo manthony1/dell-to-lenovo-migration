@@ -151,7 +151,7 @@ Get-AppxPackage -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Re
 
 ---
 
-## 🧪 Troubleshooting Login Panel
+## 🧪 Troubleshooting Login Panel (Optional, not implemented)
 ### Create a New Local Admin
 ```powershell
 net user tempfix P@ssw0rd! /add
@@ -159,12 +159,35 @@ net localgroup administrators tempfix /add
 ```
 Login as `tempfix` → Check `Sign-in Options` screen. If it works, migrate to new profile.
 
+
 ---
 
-## ✅ Mission Complete!
-You've completed a full cross-hardware Windows 11 migration from Dell to Lenovo. 🎉
+## 🧹 Post-Migration Cleanup & Healing (Optional)
 
+To ensure system stability and fix residual issues (like broken Settings panels), consider the following cleanup steps:
+
+### 🔧 Additional Repair & Reset Tools
+
+| **Action** | **Command / Tool** | **Purpose** |
+|------------|---------------------|-------------|
+| Startup Repair | Windows Recovery → Troubleshoot → Advanced → Startup Repair | Repairs boot config or startup issues |
+| Reset Search UI | `Get-AppxPackage Microsoft.Windows.Search \| Reset-AppxPackage` | Fixes broken or missing Windows search |
+| Reset Shell Experience | `Get-AppxPackage Microsoft.Windows.ShellExperienceHost \| Reset-AppxPackage` | Repairs Windows UI shell components |
+| Clear Store & Settings Cache | `wsreset.exe` | Flushes cache related to Microsoft Store and Settings app |
+| Run Start Menu Troubleshooter | [Download Tool](https://aka.ms/diag_StartMenu) | Attempts automated fixes for Start/Menu/Settings issues |
+| In-Place Upgrade Repair | [Win11 Installer](https://www.microsoft.com/software-download/windows11) → “Keep personal files and apps” | Reinstalls Windows system files without wiping data |
+
+> 🧠 Tip: Always reboot after these changes and verify Device Manager and Settings panels for improvement.
+
+
+
+---
+
+## ✅ Wrap-Up
+And that's how you do a full cross-hardware Windows 11 migration from Dell to Lenovo. 🎉
 This doc is a reference for others attempting similar low-level system recoveries.
+
+Good luck!
 
 ---
 
