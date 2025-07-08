@@ -1,9 +1,16 @@
-# dell-to-lenovo-migration
+# Dell XPS to Lenovo Cloned OS Migration
 This guide documents the **full migration process** of a Windows 11 system from an old Dell laptop to a new Lenovo laptop.
 # 🧭 Windows 11 Migration: Dell to Lenovo (Macrium Reflect + Rescue Disk)
 
 This guide documents the **full migration process** of a Windows 11 system from an old Dell laptop to a new Lenovo laptop using Macrium ReflectX and Rufus.
 It includes BIOS steps, driver fixes, PIN recovery, and repair steps — ideal for techs, sysadmins, or power users doing a full image restoration **across hardware**.
+
+## Why/My Motivation
+The reason for doing this was mostly laziness. I made the terrible assumption that in the modern world migrating a full clone OS to another machine should be easy.
+I ran into problems every step of the way. If I can save you some time, I'm glad to help. However be careful there are some big downsides to trying this:
+
+1) This process is fraught with potential for failure, from corrupted Windows due to mismatched hardware, to requiring a new license key (again from the mismatched hardware), to corrupted registry and other settings.
+2) The easier and safer course is backing up your data (cloud or file backup software), and manually restoring the apps you want. I attempted this solution just to do it. It won't save you time.
 
 ---
 
